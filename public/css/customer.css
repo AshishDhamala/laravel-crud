@@ -1,0 +1,127 @@
+.customers_list {
+	border-collapse: collapse;
+	margin-top: 10px;
+}
+
+.customers_list thead tr {
+	background: #555;
+	color: #fff;
+}
+
+.customers_list thead tr th, .customers_list tbody tr td {
+	border: 1px solid #000;
+	padding: 7px 15px;
+}
+
+.create_customer, .create_customer .form_tne, .create_customer .form_submit {
+	width: 100%;
+}
+
+.create_customer .form_tne, .create_customer .form_submit {
+	text-align: center;
+}
+
+.create_customer .form_tne input {
+	height: 30px;
+	border: 1px solid #000;
+	border-radius: 5px;
+	padding: 2px 5px;
+	margin-bottom: 5px;
+	width: 40%;
+}
+
+.create_customer .form_submit input {
+	height: 30px;
+	width: 100px;
+	padding: 3px 5px;
+	border-radius: 5px;
+}
+
+.customer_edited {
+	animation: background_fade 1.5s ease forwards;
+}
+
+
+@keyframes background_fade {
+	0%{
+		background: #fff;
+	}
+	50%{
+		background: #0af;
+	}
+	100%{
+		background: #fff;
+	}
+}
+
+.edit_button {
+	background: #0a0;
+	border: 1px solid #080;
+	border-radius: 3px;
+}
+.edit_button a {
+	color: #fff;
+	padding: 2px 7px;
+	display: block;
+	text-decoration: none;
+}
+
+.delete_button {
+	background: #a00;
+	border: 1px solid #800;
+	color: #fff;
+	padding: 4px 7px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.create_button {
+	display: inline-block;
+	background: #00c;
+	border: 1px solid #00a;
+	border-radius: 3px;
+	margin: 5px 0;
+}
+
+.create_button a {
+	display: block;
+	color: #fff;
+	padding: 5px 9px;
+	text-decoration: none;
+}
+
+.logout_customer {
+	float: right;
+}
+.logout_customer, .logout_customer li ul {
+	margin: 0;
+	padding: 0;
+	width: 150px;
+}
+.logout_customer li {
+	list-style-type: none;
+}
+.logout_customer a {
+	background: #088;
+	color: #fff;
+	border-bottom: 1px solid #055;
+	padding: 7px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+
+.logout_customer .dropdown .dropdown-menu{
+	display: none;
+}
+.logout_customer .dropdown:hover .dropdown-menu{
+	display: block;
+}
+
+.menu_below_icon::after {
+	border-color: #fff transparent transparent transparent;
+	border-style: solid;
+	border-width: 5px;
+	content: "";
+	display: inline-block;
+}
