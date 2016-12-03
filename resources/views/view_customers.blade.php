@@ -6,6 +6,8 @@
 
 @section('content')
 	
+	<div class="row">
+	<div class="col-sm-4 col-sm-offset-8">
 	<!-- Right Side Of Navbar -->
     <ul class="logout_customer">
         <!-- Authentication Links -->
@@ -30,7 +32,13 @@
             </li>
         @endif
     </ul>
+    </div><!-- Column ends -->
+    </div><!-- Row ends -->
+    
 
+
+	<div class="row">
+	<div class="col-sm-12">
 	<!-- if $lists has atleast one content then only show table -->
 	<?php //date_default_timezone_set('GMT'); ?>
 	@if(!empty($lists[0]))
@@ -63,12 +71,12 @@
 					<td>{{$list->created_at}}</td>
 					<td>{{$list->updated_at}}</td>
 					<!-- <td><div class="edit_button"><a href="/customers/{{$list->id}}">Edit</a></div></td> -->
-					<td><div class="edit_button"><a href="{{route('customer_edit', $list->id)}}">Edit</a></div></td>
+					<td><a class="btn btn-success" href="{{route('customer_edit', $list->id)}}">Edit</a></td>
 					<td>
 						<form action="{{route('customer_delete', $list->id)}}" method="POST">
 							{{csrf_field()}}
 							{{method_field('DELETE')}}
-							<input class="delete_button" type="submit" name="delete" value="Delete">
+							<input class="btn btn-danger" type="submit" name="delete" value="Delete">
 						</form>
 					</td>
 				</tr>
@@ -76,5 +84,7 @@
 	</tbody>
 	</table>
 	@endif
-	<div class="create_button"><a href="{{route('customer_create')}}">Create New Customer</a></div>
+	<div class="create_button"><a class="btn btn-primary" href="{{route('customer_create')}}">Create New Customer</a></div>
+	</div><!-- Column ends -->
+    </div><!-- Row ends -->
 @endsection
