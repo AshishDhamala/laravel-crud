@@ -87,4 +87,10 @@
 	<div class="create_button"><a class="btn btn-primary" href="{{route('customer_create')}}">Create New Customer</a></div>
 	</div><!-- Column ends -->
     </div><!-- Row ends -->
+
+    <div class="row">
+    	<div class="col-sm-4">
+    		<p>hello world.</p>
+    	</div>
+    </div>
 @endsection
